@@ -1,0 +1,81 @@
+/* Halaman Pemeriksaan UPL (hub mode) dan Tentang — memakai token .lp- dari components/Landing.css. */
+.up-card { padding-bottom: 56px; }
+.up-main { position: relative; z-index: 2; width: min(100%, 1040px); margin: 0 auto; padding: 36px clamp(20px, 4vw, 40px) 0; }
+.up-trail { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 22px; color: #7d8aa6; font-size: 12px; }
+.up-trail-item { display: inline-flex; align-items: center; gap: 6px; }
+.up-trail a:hover { color: var(--lp-blue); }
+.up-trail strong { color: var(--lp-blue); font-weight: 600; }
+
+.up-head { max-width: 640px; margin-bottom: 28px; }
+.up-head h1 { margin: 10px 0 10px; color: var(--lp-ink); font-size: clamp(26px, 3vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -.025em; }
+.up-head p { margin: 0; color: var(--lp-text); font-size: 14.5px; line-height: 1.65; }
+.up-back { margin-top: 20px; display: inline-flex; width: fit-content; }
+
+/* alur 4 langkah */
+.up-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0 0 30px; padding: 0; list-style: none; }
+.up-steps li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; background: #f8fafd; border: 1px solid #edf0f6; border-radius: 14px; }
+.up-steps li.is-current { background: #eef4ff; border-color: #cfdcf5; }
+.up-step-icon { flex: 0 0 auto; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #e6f0ff; color: var(--lp-blue); }
+.up-step-body { display: grid; gap: 3px; min-width: 0; }
+.up-step-body b { color: var(--lp-ink); font-size: 13px; font-weight: 600; }
+.up-step-body small { color: #6b7a99; font-size: 11.5px; line-height: 1.5; }
+
+/* kartu mode */
+.up-modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.up-modes-2 { max-width: 760px; }
+.up-mode {
+  display: flex; align-items: center; gap: 16px; padding: 16px 18px;
+  background: #fff; border: 1px solid #e9edf3; border-radius: 16px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.up-mode:hover { transform: translateY(-2px); border-color: #cfdcf5; box-shadow: 0 14px 32px rgba(30, 50, 90, .08); }
+.up-mode-logo { flex: 0 0 auto; display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; width: 88px; height: 72px; overflow: hidden; background: #fff; border: 1px solid #edf0f6; border-radius: 14px; }
+.up-mode-logo img { display: block; box-sizing: border-box; width: 100%; height: 100%; min-width: 0; min-height: 0; padding: 8px; object-fit: contain; }
+.up-mode-logo.is-category { width: 72px; }
+.up-mode-logo.is-category .brand-logo { border: 0; }
+.up-logo-fallback { color: var(--lp-blue); font-size: 24px; font-weight: 800; }
+.up-mode-body { display: grid; flex: 1; gap: 5px; min-width: 0; }
+.up-mode-body strong { color: var(--lp-ink); font-size: 15px; font-weight: 700; letter-spacing: -.01em; }
+.up-mode-text { color: #6b7a99; font-size: 12.5px; line-height: 1.55; }
+.up-mode-formats { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.up-mode-formats code, .up-about-modes code { padding: 2px 8px; background: #eef4ff; border-radius: 999px; color: #2a55b8; font-family: var(--mono); font-size: 11px; font-weight: 600; }
+.up-about-modes td code + code { margin-left: 6px; }
+.up-mode-arrow { flex: 0 0 auto; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #eef4ff; color: var(--lp-blue); transition: transform 160ms ease, background 160ms ease; }
+.up-mode:hover .up-mode-arrow { transform: translateX(3px); background: #dbe8ff; }
+
+/* Tentang */
+.up-about-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 34px; }
+.up-about-card { padding: 22px; background: #fff; border: 1px solid #e9edf3; border-radius: 16px; }
+.up-about-card h2 { margin: 14px 0 8px; color: var(--lp-ink); font-size: 15px; font-weight: 700; }
+.up-about-card p { margin: 0; color: #6b7a99; font-size: 13px; line-height: 1.65; }
+.up-about-modes h2 { margin: 0 0 14px; color: var(--lp-ink); font-size: 18px; font-weight: 700; letter-spacing: -.01em; }
+.up-table-wrap { overflow-x: auto; border: 1px solid #e9edf3; border-radius: 16px; }
+.up-about-modes table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.up-about-modes th, .up-about-modes td { padding: 12px 16px; border-bottom: 1px solid #eef1f6; text-align: left; vertical-align: top; }
+.up-about-modes th { background: #f8fafd; color: #6b7a99; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.up-about-modes tr:last-child td { border-bottom: 0; }
+.up-about-modes td:first-child a { color: var(--lp-ink); font-weight: 600; white-space: nowrap; }
+.up-about-modes td:first-child a:hover { color: var(--lp-blue); }
+.up-about-modes td:nth-child(2) { white-space: nowrap; }
+.up-about-modes td:last-child { color: #5a6a8a; line-height: 1.55; min-width: 260px; }
+.lp-root a.lp-btn-primary { color: #fff; }
+.up-about-cta { display: flex; justify-content: center; margin-top: 34px; }
+
+@media (max-width: 1000px) {
+  .up-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .up-about-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .up-modes { grid-template-columns: 1fr; }
+  .up-main { padding-top: 24px; }
+}
+@media (max-width: 520px) {
+  .up-steps { grid-template-columns: 1fr; }
+  .up-mode { gap: 12px; padding: 14px; }
+  .up-mode-logo { width: 72px; height: 60px; }
+  .up-mode-arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .up-mode, .up-mode-arrow { transition: none; }
+  .up-mode:hover, .up-mode:hover .up-mode-arrow { transform: none; }
+}
